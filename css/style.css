@@ -1,0 +1,114 @@
+body{ 
+    background-image:url(../img/fondo.jpg); 
+    background-repeat: no-repeat;
+     background-size:cover; 
+    /* background:rgb(182, 185, 199); */
+ }
+
+.container_video{
+    /* border: 1px solid red; */
+    margin: auto;
+    max-inline-size: 900px;
+    max-block-size: 500px;
+    margin-top: 50px;
+
+}
+
+.player{
+    margin-block-end: 100px;
+    /* border: 2px solid red; */
+    position: relative;
+}
+.player-overlay{
+    position: absolute;
+    inset:0;
+    opacity:0;
+    transition: .3s opacity ;
+    
+}
+.player:hover .player-overlay{
+    opacity: 1;
+}
+
+.player video{
+    inline-size: 100%;
+    block-size: 70%;
+    aspect-ratio: 16/9;
+    vertical-align: middle;
+    object-fit: cover;
+    /* margin-block-start: 100px; */
+}
+.player-title{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    color: #fff;
+    position: absolute;
+    inset-block-start: 0px;
+    inset-inline-start:20px ;
+    
+}
+
+.player-actions{
+    position:absolute;
+    /* border: 2px solid blue; */
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    /* z-index: 2; */
+}
+
+.player-progress{
+    /* background:yellow; */
+    position: absolute;
+    inset-block-end: 0;
+    inset-inline: 0;
+    display: flex;
+    padding: 20px;
+}
+
+.player-progress input{
+    flex: 0.8;
+    z-index: 2;
+    cursor: pointer;
+    accent-color: #656d65;
+}
+
+.volume{
+    /* background: yellow; */
+    position: absolute;
+    inset-block-end: 0;
+    inset-inline-end: 0;
+    display: flex;
+    padding: 20px;
+
+
+}
+.volume input{
+    flex: 0.3;
+    z-index: 2;
+    cursor: pointer;
+    accent-color: #656d65;
+
+}
+
+.button{
+    inline-size: 35px;
+    block-size: 35px;
+    border: none;
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+.button:active{ transform: scale(0.9 , 0.9); }
+.button:hover{ opacity: 0.8; }
+
+#pause{ background-image: url('../img/icons8-pause_button\ 1.svg');}
+#forward{ background-image: url('../img/icons8-reset\ 1.svg'); }
+#play{ background-image: url('../img/icons8-circled_play\ 1.svg'); }
+#backward{ background-image: url('../img/icons8-reset\ 2.svg'); }
+
