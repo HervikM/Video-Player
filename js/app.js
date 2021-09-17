@@ -47,9 +47,9 @@ progreso.addEventListener('input', handleInput = () => {
     video.currentTime = progreso.value 
 })
 
-volumen.addEventListener('change', vol = (ev) =>{
-    video.volume = ev.target.value;
-}, true)
+// volumen.addEventListener('change', vol = (ev) =>{
+//     video.volume = ev.target.value;
+// }, true)
 
 console.log(video.duration)
 console.log(video.currentTime)  
