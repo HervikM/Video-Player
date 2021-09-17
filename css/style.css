@@ -67,7 +67,6 @@ body{
     display: flex;
     padding: 20px;
     /* border: 1px solid blue; */
-    flex: 0.8;
 }
 
 .player-progress input{
